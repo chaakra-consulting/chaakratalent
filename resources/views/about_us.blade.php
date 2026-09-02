@@ -18,8 +18,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Jasa Rekrutmen Perusahaan, Layanan Rekrutmen SDM, Biro Psikologi, Jasa Rekrutmen Perusahaan, Jasa Psikolog Surabaya, Pelatihan SDM Terbaik, Pelatihan SDM Surabaya">
     <meta name="description"
-        content="Layanan Psikologi Chaakra Consulting: Rekrutmen, Assessment, dan Pengembangan SDM." />
+        content="Penyedia layanan rekrutmen, asesmen, dan pelatihan SDM untuk membantu perusahaan membangun tim yang kompeten" />
     <link rel="icon" href="{{ asset('assets/cms/images/favicon.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('assets/cms/css/style.css') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

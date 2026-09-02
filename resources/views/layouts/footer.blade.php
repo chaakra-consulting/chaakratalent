@@ -4,7 +4,7 @@
             <!-- Top Grid Section -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
                 <!-- Column 1: Brand & Description -->
-                <div class="flex flex-col gap-6 sr-bottom">
+                <div class="flex flex-col gap-6">
                     <!-- Logo Mockup -->
                     <div class="flex items-center gap-2">
                         <span class="text-3xl font-bold tracking-tight text-white">
@@ -23,10 +23,10 @@
                             class="h-32 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
                     </div>
                 </div>
-                <div class="sr-bottom">
-                    <h3 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Contact Us
-                    </h3>
+                <div class="">
+                    <h1 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Hubungi Kami
+                    </h1>
                     <ul class="space-y-4 text-gray-400">
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-[#ffdc59] shrink-0 mt-0.5" fill="none" stroke="currentColor"
@@ -44,7 +44,7 @@
                             <svg class="w-5 h-5 text-[#ffdc59] shrink-0" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    d="M3 5a2 2 0 012-2h1.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
                                 </path>
                             </svg>
                             <span>+62 857 3087 7745</span>
@@ -63,10 +63,10 @@
                 </div>
 
                 <!-- Column 4: Socials -->
-                <div class="sr-bottom">
-                    <h3 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Follow Us
-                    </h3>
+                <div class="">
+                    <h1 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Sosial Media
+                    </h1>
                     <div class="flex gap-4">
                         <a href="https://www.tiktok.com/@chaakra.consulting" target="_blank"
                             class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#ffdc59] hover:text-gray-900 transition-all duration-300 hover:-translate-y-1"
@@ -90,16 +90,15 @@
                             aria-label="LinkedIn">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path fill-rule="evenodd"
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h1v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h1v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
                                     clip-rule="evenodd" />
                             </svg>
                         </a>
                     </div>
 
-                    <h3 class="text-white font-bold text-lg mt-10 mb-6 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Our Other
-                        Service
-                    </h3>
+                    <h1 class="text-white font-bold text-lg mt-10 mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Layanan Lainnya
+                    </h1>
                     <ul class="space-y-4">
                         <li>
                             <a href="https://choise.chaakra-consulting.com/" target="_blank"
@@ -109,10 +108,10 @@
                 </div>
 
                 <!-- Column 5: Map -->
-                <div class="sr-bottom h-full flex flex-col">
-                    <h3 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Location
-                    </h3>
+                <div class=" h-full flex flex-col">
+                    <h1 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Lokasi
+                    </h1>
                     <div
                         class="w-full flex-grow min-h-[200px] rounded-lg overflow-hidden border border-gray-800 relative">
                         <iframe
@@ -127,7 +126,7 @@
 
             <!-- Bottom Bar -->
             <div
-                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 sr-bottom">
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 ">
                 <p class="text-gray-400 text-sm text-center md:text-left">
                     © 2025 part of
                     <a href="https://chaakra-consulting.com/" target="_blank"

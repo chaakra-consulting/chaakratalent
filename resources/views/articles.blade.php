@@ -2,12 +2,25 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JWWQZ09M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M4JWWQZ09M');
+    </script>
     <title>Layanan Psikologi - Chaakra Talent</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Jasa Rekrutmen Perusahaan, Layanan Rekrutmen SDM, Biro Psikologi, Jasa Rekrutmen Perusahaan, Jasa Psikolog Surabaya, Pelatihan SDM Terbaik, Pelatihan SDM Surabaya">
     <meta name="description"
-        content="Layanan Psikologi Chaakra Consulting: Rekrutmen, Assessment, dan Pengembangan SDM." />
+        content="Penyedia layanan rekrutmen, asesmen, dan pelatihan SDM untuk membantu perusahaan membangun tim yang kompeten" />
     <link rel="icon" href="{{ asset('assets/cms/images/favicon.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('assets/cms/css/style.css') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +28,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light-border.css" />
+    <!-- Alpine.js is loaded here -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
         body {
@@ -38,7 +53,8 @@
         <div class="max-w-screen mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="flex items-center justify-between w-full md:w-auto">
                 <div class="shrink-0 flex items-center h-full">
-                    <img src="{{ asset('assets/cms/images/logo-2.png') }}" alt="Logo" id="logo" class="h-18 w-auto object-contain" />
+                    <img src="{{ asset('assets/cms/images/logo-2.png') }}" alt="Logo" id="logo"
+                        class="h-18 w-auto object-contain" />
                 </div>
 
                 <button id="menuToggleBtn"
@@ -64,13 +80,12 @@
             <div class="relative z-10 flex flex-col items-center justify-center text-center px-4">
                 <span
                     class="inline-flex items-center rounded-lg bg-[#ffdc59] px-2 py-1 text-md font-bold text-gray-800 inset-ring inset-ring-[#ffdc59]/20">Blog</span>
-                <h1
-                    class="sr-left text-gray-800 text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-3xl">
+                <h1 class=" text-gray-800 text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-3xl">
                     Artikel Terbaru
                 </h1>
 
                 <div class="max-w-3xl">
-                    <h3 class="text-gray-600 text-xl mt-4 leading-relaxed sr-left">
+                    <h3 class="text-gray-600 text-xl mt-4 leading-relaxed">
                         Temukan wawasan, tips, dan panduan seputar psikologi, pengembangan SDM, dan dunia kerja di blog
                         kami.
                     </h3>
@@ -78,101 +93,76 @@
             </div>
         </div>
     </section>
-    <section class="grid md:grid-cols-3 gap-4 px-6 md:px-10 md:pb-16 md:pb-0 grid-flow-row md:grid-flow-col grid-cols-1">
-        <a href="#" class="flex max-w-screen items-center justify-center group hover:-translate-y-2 transition-transform ease-in-out duration-300">
-            <!-- Card Container -->
-            <div class="w-full max-w-screen md:max-w-[400px] rounded-[25px] bg-[#f3f3f3] group-hover:bg-gray-900  ease-in-out transition p-4">
-                <!-- Image & Badge Section -->
-                <div class="relative">
-                    <img src="https://framerusercontent.com/images/xgvT1z0zydCGbmMRZMJh1S1lXH8.jpg?scale-down-to=512&width=2500&height=1500" alt="Group of diverse people smiling"
-                        class="aspect-4/2 w-full rounded-[24px] object-cover" />
-                    <!-- Category Badge -->
-                    <span
-                        class="absolute left-4 top-4 rounded-xl bg-[#ffdc59] px-4 py-1.5 text-[15px] font-semibold text-black">
-                        Tech
-                    </span>
-                </div>
-                <!-- Text Content Section -->
-                <div class="px-1 pb-4 pt-6">
-                    <h2 class="text-[26px] font-bold leading-[1.2] tracking-tight  ease-in-out transition group-hover:text-white text-gray-800">
-                        The Art of Website<br />
-                        Typography: Best Practices<br />
-                        and Tips
-                    </h2>
-                    <p class="mt-3 text-[17px] leading-[1.6]  group-hover:text-white/90 text-[#666666]">
-                        "Discover the power of typography in<br />
-                        web design for captivating user<br />
-                        experiences.
-                    </p>
-                    <p class="mt-3 text-[10px] leading-[1.6] text-[#868686]">
-                        Admin | 06 Sept 2026
-                    </p>
-                </div>
+
+    <!-- ALPINE JS INFINITE SCROLL WRAPPER -->
+    <!-- Passes initial PHP articles data and next page URL dynamically -->
+    <div x-data="infiniteScroll(
+        {{ isset($articles) ? json_encode($articles->items()) : '[]' }},
+        '{{ isset($articles) ? $articles->nextPageUrl() : '' }}'
+    )">
+
+        <!-- GRID SECTION -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 md:px-10 md:pb-16" id="article-container">
+
+            <!-- ALPINE TEMPLATE LOOP -->
+            <!-- ALPINE TEMPLATE LOOP -->
+            <template x-for="article in articles" :key="article.id">
+                <!-- Added: h-full w-full (removed items-center justify-center to allow stretching) -->
+                <a :href="'{{ route('articles.show', 'slug') }}'.replace('slug', article.slug)"
+                    class="flex w-full h-full group hover:-translate-y-2 transition-transform ease-in-out duration-300 sr-bottom">
+
+                    <!-- Card Container -->
+                    <!-- Added: h-full flex flex-col -->
+                    <div
+                        class="w-full h-full flex flex-col max-w-screen rounded-[25px] bg-[#f3f3f3] group-hover:bg-gray-900 ease-in-out transition p-4">
+
+                        <!-- Image & Badge Section -->
+                        <div class="relative shrink-0">
+                            <img :src="'{{asset('storage/' . 'url')}}'.replace('url',article.image) "
+                                :alt="article.title" class="aspect-4/2 w-full rounded-[24px] object-cover" />
+
+                            <!-- Category Badge -->
+                            <span x-text="article.tags"
+                                class="absolute left-4 top-4 rounded-xl bg-[#ffdc59] px-4 py-1.5 text-[15px] font-semibold text-black">
+                            </span>
+                        </div>
+
+                        <!-- Text Content Section -->
+                        <!-- Added: flex flex-col flex-grow -->
+                        <div class="px-1 pb-2 pt-6 flex flex-col flex-grow">
+                            <h2 x-text="article.title"
+                                class="text-[26px] font-bold leading-[1.2] tracking-tight ease-in-out transition group-hover:text-white text-gray-800">
+                            </h2>
+                            <p x-text="stripHtml(article.content) ? stripHtml(article.content).substring(0, 80) + '...' : ''"
+                                class="mt-3 text-[17px] leading-[1.6] group-hover:text-white/90 text-[#666666] whitespace-pre-line">
+                            </p>
+
+                            <!-- Added: mt-auto (This forces the author/date to the absolute bottom of the card) -->
+                            <p class="mt-auto pt-4 text-[10px] leading-[1.6] text-[#868686]">
+                                <span x-text="article.author?.name || 'Admin'"></span> | <span
+                                    x-text="formatDate(article.created_at)"></span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </template>
+            <div x-show="articles.length === 0" 
+                 class="col-span-1 md:col-span-3 flex justify-center items-center py-16" 
+                 style="display: none;">
+                <p class="text-md text-gray-600">Artikel Kosong</p>
             </div>
-        </a>
-        <a href="#" class="flex max-w-screen items-center justify-center group hover:-translate-y-2 transition-transform ease-in-out duration-300">
-            <!-- Card Container -->
-            <div class="w-full max-w-screen md:max-w-[400px] rounded-[25px] bg-[#f3f3f3] group-hover:bg-gray-900  ease-in-out transition p-4">
-                <!-- Image & Badge Section -->
-                <div class="relative">
-                    <img src="https://framerusercontent.com/images/xgvT1z0zydCGbmMRZMJh1S1lXH8.jpg?scale-down-to=512&width=2500&height=1500" alt="Group of diverse people smiling"
-                        class="aspect-4/2 w-full rounded-[24px] object-cover" />
-                    <!-- Category Badge -->
-                    <span
-                        class="absolute left-4 top-4 rounded-xl bg-[#ffdc59] px-4 py-1.5 text-[15px] font-semibold text-black">
-                        Tech
-                    </span>
-                </div>
-                <!-- Text Content Section -->
-                <div class="px-1 pb-4 pt-6">
-                    <h2 class="text-[26px] font-bold leading-[1.2] tracking-tight  ease-in-out transition group-hover:text-white text-gray-800">
-                        The Art of Website<br />
-                        Typography: Best Practices<br />
-                        and Tips
-                    </h2>
-                    <p class="mt-3 text-[17px] leading-[1.6]  group-hover:text-white/90 text-[#666666]">
-                        "Discover the power of typography in<br />
-                        web design for captivating user<br />
-                        experiences.
-                    </p>
-                    <p class="mt-3 text-[10px] leading-[1.6] text-[#868686]">
-                        Admin | 06 Sept 2026
-                    </p>
-                </div>
-            </div>
-        </a>
-        <a href="#" class="flex max-w-screen items-center justify-center group hover:-translate-y-2 transition-transform ease-in-out duration-300">
-            <!-- Card Container -->
-            <div class="w-full max-w-screen md:max-w-[400px] rounded-[25px] bg-[#f3f3f3] group-hover:bg-gray-900  ease-in-out transition p-4">
-                <!-- Image & Badge Section -->
-                <div class="relative">
-                    <img src="https://framerusercontent.com/images/xgvT1z0zydCGbmMRZMJh1S1lXH8.jpg?scale-down-to=512&width=2500&height=1500" alt="Group of diverse people smiling"
-                        class="aspect-4/2 w-full rounded-[24px] object-cover" />
-                    <!-- Category Badge -->
-                    <span
-                        class="absolute left-4 top-4 rounded-xl bg-[#ffdc59] px-4 py-1.5 text-[15px] font-semibold text-black">
-                        Tech
-                    </span>
-                </div>
-                <!-- Text Content Section -->
-                <div class="px-1 pb-4 pt-6">
-                    <h2 class="text-[26px] font-bold leading-[1.2] tracking-tight  ease-in-out transition group-hover:text-white text-gray-800">
-                        The Art of Website<br />
-                        Typography: Best Practices<br />
-                        and Tips
-                    </h2>
-                    <p class="mt-3 text-[17px] leading-[1.6]  group-hover:text-white/90 text-[#666666]">
-                        "Discover the power of typography in<br />
-                        web design for captivating user<br />
-                        experiences.
-                    </p>
-                    <p class="mt-3 text-[10px] leading-[1.6] text-[#868686]">
-                        Admin | 06 Sept 2026
-                    </p>
-                </div>
-            </div>
-        </a>
-    </section>
+
+        </section>
+
+        <!-- INFINITE SCROLL LOADING TRIGGER -->
+        <div x-ref="trigger" class="w-full py-10 flex justify-center items-center min-h-[80px]">
+            <!-- Spinner toggles based on loading state -->
+            <div x-show="isLoading"
+                class="animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-gray-800 border-t-[#ffdc59]"
+                style="display: none;"></div>
+        </div>
+
+    </div>
 
     @include('layouts.footer')
 
@@ -182,40 +172,17 @@
 
     <script>
         // Page Loader
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             const loader = document.getElementById('page-loader');
             if (loader) {
                 loader.classList.add('opacity-0');
-                setTimeout(() => { loader.style.display = 'none'; }, 500);
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
             }
         });
 
-        document.addEventListener("scroll", function () {
-            const indicator = document.getElementById("scrollIndicator");
-            const heroSection = document.getElementById("heroSection");
-
-            if (indicator && heroSection) {
-                const triggerPoint = heroSection.offsetHeight * 0.15;
-
-                if (window.scrollY > triggerPoint) {
-                    indicator.classList.remove("opacity-100", "translate-y-0");
-                    indicator.classList.add(
-                        "opacity-0",
-                        "-translate-y-4",
-                        "pointer-events-none",
-                    );
-                } else {
-                    indicator.classList.add("opacity-100", "translate-y-0");
-                    indicator.classList.remove(
-                        "opacity-0",
-                        "-translate-y-4",
-                        "pointer-events-none",
-                    );
-                }
-            }
-        });
-
-        // --- NEW NAVBAR AND BACKDROP LOGIC ---
+        // Sticky Nav Logic
         const mainNav = document.getElementById("mainNav");
         const menuToggleBtn = document.getElementById("menuToggleBtn");
         const navBackdrop = document.getElementById("navBackdrop");
@@ -245,21 +212,21 @@
         });
 
         function handleNavSticky() {
-            const navLinks = document.querySelectorAll("#mainNav .nav-link");
             if (window.scrollY > 10) {
                 mainNav.classList.add("nav-sticky");
-
             } else {
                 mainNav.classList.remove("nav-sticky");
-
             }
         }
 
-        window.addEventListener("scroll", handleNavSticky, { passive: true });
+        window.addEventListener("scroll", handleNavSticky, {
+            passive: true
+        });
         window.addEventListener("resize", handleNavSticky);
 
-        // Scroll Reveal
-        ScrollReveal().reveal(".sr-bottom", {
+        // Scroll Reveal Configuration
+        const sr = ScrollReveal();
+        sr.reveal(".sr-bottom", {
             origin: "bottom",
             distance: "30px",
             duration: 800,
@@ -269,7 +236,7 @@
             interval: 100,
         });
 
-        ScrollReveal().reveal(".sr-left", {
+        sr.reveal(".sr-left", {
             origin: "left",
             distance: "40px",
             duration: 800,
@@ -278,7 +245,93 @@
             easing: "cubic-bezier(0.5, 0, 0, 1)"
         });
 
-      
+        // --- ALPINE JS INFINITE SCROLL COMPONENT ---
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('infiniteScroll', (initialArticles, initialNextPageUrl) => ({
+                articles: initialArticles || [],
+                nextPageUrl: initialNextPageUrl || null,
+                isLoading: false,
+
+                init() {
+                    // Set up the Intersection Observer
+                    const observer = new IntersectionObserver((entries) => {
+                        // When the trigger div enters the viewport and we have a URL for the next page
+                        if (entries[0].isIntersecting && this.nextPageUrl) {
+                            this.fetchMoreData();
+                        }
+                    }, {
+                        rootMargin: '150px'
+                    }); // Load slightly before reaching the absolute bottom
+
+                    // Start observing the trigger div (x-ref="trigger")
+                    observer.observe(this.$refs.trigger);
+                },
+
+                stripHtml(html) {
+                    if (!html) return '';
+                    // const doc = new DOMParser().parseFromString(html, 'text/html');
+                    // return doc.body.textContent || "";
+                    const spacedHtml = html.replace(/<\/p>|<\/div>|<\/h[1-6]>|<br\s*\/?>/gi, '\n');
+                    const doc = new DOMParser().parseFromString(spacedHtml, 'text/html');
+                    return (doc.body.textContent || "").trim();
+                },
+
+                fetchMoreData() {
+                    if (this.isLoading || !this.nextPageUrl) return;
+                    this.isLoading = true;
+
+                    // Standard XMLHttpRequest (Pure AJAX)
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('GET', this.nextPageUrl, true);
+
+                    // Crucial headers for Laravel to respond with JSON instead of HTML
+                    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                    xhr.setRequestHeader('Accept', 'application/json');
+
+                    xhr.onload = () => {
+                        if (xhr.status >= 200 && xhr.status < 400) {
+                            const response = JSON.parse(xhr.responseText);
+
+                            // Check if Laravel returned standard paginator format (response.data)
+                            const newArticles = response.data ? response.data : response;
+
+                            // Append new articles to existing ones. Alpine handles DOM updates automatically.
+                            this.articles = [...this.articles, ...newArticles];
+
+                            // Update URL for the next iteration (null if no more pages)
+                            this.nextPageUrl = response.next_page_url || null;
+
+                            // Wait for Alpine to render the new HTML, then run ScrollReveal on the new elements
+                            this.$nextTick(() => {
+                                if (typeof sr !== 'undefined') sr.sync();
+                            });
+                        } else {
+                            console.error('Server returned an error:', xhr.statusText);
+                        }
+
+                        this.isLoading = false;
+                    };
+
+                    xhr.onerror = () => {
+                        console.error('Network error during infinite scroll request.');
+                        this.isLoading = false;
+                    };
+
+                    xhr.send();
+                },
+
+                // Helper to format timestamps to '06 Sept 2026' style
+                formatDate(dateString) {
+                    if (!dateString) return '';
+                    const options = {
+                        day: '2-digit',
+                        month: 'short',
+                        year: 'numeric'
+                    };
+                    return new Date(dateString).toLocaleDateString('id-ID', options);
+                }
+            }));
+        });
     </script>
 </body>
 
