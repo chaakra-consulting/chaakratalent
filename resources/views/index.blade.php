@@ -90,7 +90,7 @@
                     <a href="/" class="nav-link text-md font-semibold text-[#ffdc59] hover:text-[#ffdc59]">Beranda</a>
                     <a href="{{ route('about-us') }}"
                         class="nav-link text-md font-semibold text-white hover:text-[#ffdc59]">Tentang Kami</a>
-                    <a href="{{ route('articles.index') }}" target="_blank"
+                    <a href="{{ route('articles.index') }}"
                         class="nav-link text-md font-semibold text-white hover:text-[#ffdc59]">Artikel</a>
                     <a href="https://chaakra-consulting.com/" target="_blank"
                         class="nav-link text-md font-semibold text-white hover:text-[#ffdc59]">Untuk Perusahaan</a>
