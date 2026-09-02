@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JWWQZ09M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M4JWWQZ09M');
+    </script>
     <title>Layanan Psikologi - Chaakra Talent</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,15 +21,18 @@
     <meta name="google-site-verification" content="RFgW4y6g5rO61tYhzA0Z8LzNAPWF4Y45Eoin25nYgQ0" />
     <link rel="icon" href="{{ asset('assets/cms/images/favicon.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('assets/cms/css/style.css') }}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light-border.css" />
     <style>
-        .splide__pagination{
+        .splide__pagination {
             bottom: 3rem !important;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
         }
     </style>
 </head>
@@ -48,7 +60,8 @@
         <div class="max-w-screen mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="flex items-center justify-between w-full md:w-auto">
                 <div class="shrink-0 flex items-center h-full">
-                    <img src="{{ asset('assets/cms/images/logo-2.png') }}" alt="Logo" id="logo" class="h-18 w-auto object-contain" />
+                    <img src="{{ asset('assets/cms/images/logo-2-white.png') }}" alt="Logo" id="logo"
+                        class="h-18 w-auto object-contain" />
                 </div>
 
                 <button id="menuToggleBtn"
@@ -65,7 +78,15 @@
             </div>
 
             <div class="hidden group-[.open]:flex md:flex flex-col md:flex-row items-center gap-6 w-auto mt-4 md:mt-0">
-              @include('layouts.navbar')
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <a href="/" class="nav-link text-md font-semibold text-[#ffdc59] hover:text-[#ffdc59]">Beranda</a>
+                    <a href="{{ route('about-us') }}"
+                        class="nav-link text-md font-semibold text-white hover:text-[#ffdc59]">Tentang Kami</a>
+                    <a href="{{ route('articles.index') }}" target="_blank"
+                        class="nav-link text-md font-semibold text-white hover:text-[#ffdc59]">Artikel</a>
+                    <a href="https://chaakra-consulting.com/" target="_blank"
+                        class="nav-link text-md font-semibold text-white hover:text-[#ffdc59]">Untuk Perusahaan</a>
+                </div>
                 <!-- <a href="#"
                     class="cursor-pointer relative z-10 flex items-center justify-center gap-2 px-4 py-2 mx-auto overflow-hidden text-lg border-2 border-gray-50 rounded-full bg-gray-50 backdrop-blur-md lg:font-medium font-semibold text-gray-800 before:absolute before:-z-10 before:aspect-square before:w-full before:-left-full before:rounded-full before:bg-[#ffdc59] before:transition-all before:duration-700 hover:before:left-0 hover:before:w-full hover:before:scale-150 hover:[&_svg]:rotate-90 hover:[&_svg]:bg-gray-50 hover:[&_svg]:border-transparent">
                     Explore
@@ -82,63 +103,69 @@
     </nav>
 
     <section id="heroSection" class="relative w-full min-h-[80vh] mb-36 justify-between flex md:flex-row flex-col">
-    <div class="relative w-full pb-24">
+        <div class="relative w-full pb-24">
 
-        <div id="hero-slider" class="splide relative overflow-hidden bg-gray-900 shadow-xl h-150 w-full z-0">
-            <div class="splide__track h-full w-full">
-                <ul class="splide__list h-full w-full">
-                    <li class="splide__slide h-full w-full">
-                        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                             style="background-image: url('{{ asset('assets/cms/images/3.png') }}');">
-                        </div>
-                    </li>
-                    
-                    <li class="splide__slide h-full w-full">
-                        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                             style="background-image: url('{{ asset('assets/cms/images/4.png') }}');">
-                        </div>
-                    </li>
-                    
-                    <li class="splide__slide h-full w-full">
-                        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                             style="background-image: url('{{ asset('assets/cms/images/5.png') }}');">
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            <div id="hero-slider" class="splide relative overflow-hidden bg-gray-900 shadow-xl h-150 w-full z-0">
+                <div class="splide__track h-full w-full">
+                    <ul class="splide__list h-full w-full">
+                        <li class="splide__slide h-full w-full">
+                            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-1.png') }}');">
+                            </div>
+                        </li>
 
-        <div class="absolute left-1/2 -translate-x-1/2 -bottom-[10%] md:-bottom-4 w-[95%] max-w-[900px] sr-bottom z-20">
-            <div class="bg-white rounded-2xl shadow-xl p-6 z-20">
+                        <li class="splide__slide h-full w-full">
+                            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-2.png') }}');">
+                            </div>
+                        </li>
 
-                <div class="md:flex grid grid-flow-cols grid-cols-2 grid-rows-2 md:flex-row items-center gap-4 md:gap-0">
-                    
-                    <div class="flex flex-col items-center text-center w-full">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-[#D57B28] mb-3"> 10k+</h3>
-                        <p class="text-gray-600 font-medium text-sm md:text-base leading-snug">Total Peserta Talent Tertangani</p>
-                    </div>
-
-                    <div class="flex flex-col items-center text-center w-full">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-[#D57B28] mb-3">50+</h3>
-                        <p class="text-gray-600 font-medium text-sm md:text-base leading-snug">Psikolog Profesional Terafiliasi</p>
-                    </div>
-
-                    <div class="flex flex-col items-center text-center w-full">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-[#D57B28] mb-3">2k+</h3>
-                        <p class="text-gray-600 font-medium text-sm md:text-base leading-snug">Pembuatan Kontrak Kerja Perusahaan</p>
-                    </div>
-
-                    <div class="flex flex-col items-center text-center w-full">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-[#D57B28] mb-3">100+</h3>
-                        <p class="text-gray-600 font-medium text-sm md:text-base leading-snug">Alat tes Psikologi ter-update</p>
-                    </div>
-                    
+                        <li class="splide__slide h-full w-full">
+                            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-3.png') }}');">
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
 
-    </div>
-</section>
+            <div
+                class="absolute left-1/2 -translate-x-1/2 -bottom-[10%] md:-bottom-4 w-[95%] max-w-[900px] sr-bottom z-20">
+                <div class="bg-white rounded-2xl shadow-xl p-6 z-20">
+
+                    <div
+                        class="md:flex grid grid-flow-cols grid-cols-2 grid-rows-2 md:flex-row items-center gap-4 md:gap-0">
+
+                        <div class="flex flex-col items-center text-center w-full">
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-[#D57B28] mb-3"> 10k+</h3>
+                            <p class="text-gray-600 font-medium text-sm md:text-base leading-snug">Total Peserta Talent
+                                Tertangani</p>
+                        </div>
+
+                        <div class="flex flex-col items-center text-center w-full">
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-[#D57B28] mb-3">50+</h3>
+                            <p class="text-gray-600 font-medium text-sm md:text-base leading-snug">Psikolog Profesional
+                                Terafiliasi</p>
+                        </div>
+
+                        <div class="flex flex-col items-center text-center w-full">
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-[#D57B28] mb-3">2k+</h3>
+                            <p class="text-gray-600 font-medium text-sm md:text-base leading-snug">Pembuatan Kontrak
+                                Kerja Perusahaan</p>
+                        </div>
+
+                        <div class="flex flex-col items-center text-center w-full">
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-[#D57B28] mb-3">100+</h3>
+                            <p class="text-gray-600 font-medium text-sm md:text-base leading-snug">Alat tes Psikologi
+                                ter-update</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
     <div class="max-w-full px-4 md:px-10 overflow-hidden">
@@ -342,7 +369,8 @@
                         <h3 class="text-base sm:text-xl font-bold text-gray-800 italic">1. Job Profiling & Needs
                             Analysis
                         </h3>
-                        <p class="text-sm sm:text-md text-[#6b6b6b] leading-[1.6] mt-1">Menyelaraskan standar kompetensi
+                        <p class="text-sm sm:text-md text-[#6b6b6b] leading-[1.6] mt-1">Menyelaraskan standar
+                            kompetensi
                             dengan kebutuhan spesifik posisi di perusahaan klien.</p>
                     </div>
                 </div>
@@ -448,7 +476,8 @@
 
                     <!-- 2. TOP BADGE TEXT -->
                     <div class="absolute left-0 top-0 z-0 w-full py-2 text-center">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-white">Khusus Untuk Korporat</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-white">Khusus Untuk
+                            Korporat</span>
                     </div>
 
                     <!-- 3. INNER WHITE CONTAINER -->
@@ -531,7 +560,7 @@
                                     class="relative rounded-xl px-4 py-3 transition-colors group-hover/btn:bg-transparent">
                                     <span class="relative flex items-center justify-center gap-2 font-bold">
                                         Jadwalkan Konsultasi
-                                        
+
                                     </span>
                                 </div>
                             </button>
@@ -796,7 +825,7 @@
                         <div class="flex flex-col">
                             <h4 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Bank Syariah Indonesia
                                 (BSI)</h4>
-                            <span class="text-[10px] text-gray-400">Rekrutmen</span>
+                            <span class="text-[10px] text-gray-400">REKRUTMEN</span>
                         </div>
                     </div>
                 </div>
@@ -811,20 +840,19 @@
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Sangat membantu menentukan minat dan bakat anak kami utk melangkah ke jenjang pendidikan
-                        selanjutnya 😍 terimakasih chaakra consulting 🙏🏼
+                        Tim di Chaakra Consulting sangat responsif dan membantu dalam hal Pembuatan Strategi Bisnis.
+                        Mereka menjawab semua pertanyaan kami dengan cepat, tepat dan memastikan kami memiliki semua
+                        informasi yang dibutuhkan sebelum kami melakukan tindakan
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C9.243 2 7 4.243 7 7c0 2.757 2.243 5 5 5s5-2.243 5-5c0-2.757-2.243-5-5-5zm0 12c-5.335 0-10 3.166-10 7h20c0-3.834-4.665-7-10-7z" />
-                            </svg>
+                            <img src="{{ asset('assets/cms/images/clients/Wilmar_International_Logo.svg.webp') }}"
+                                alt="Wilmar International">
                         </div>
                         <div class="flex flex-col">
-                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Helen Norce
+                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">PT. Willmar
                             </h4>
-                            <span class="text-[10px] text-gray-400">TES MINAT BAKAT</span>
+                            <span class="text-[10px] text-gray-400">REKRUTMEN</span>
                         </div>
                     </div>
                 </div>
@@ -837,18 +865,17 @@
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                       Puas banget sama layanan di Chaakra Consulting! Tes minat bakatnya akurat dan ngebantu banget buat nentuin jenjang pendidikan
+                        Chaakra Consulting merupakan salah satu konsultan management dan sdm terbaik yang pernah kami
+                        hire
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C9.243 2 7 4.243 7 7c0 2.757 2.243 5 5 5s5-2.243 5-5c0-2.757-2.243-5-5-5zm0 12c-5.335 0-10 3.166-10 7h20c0-3.834-4.665-7-10-7z" />
-                            </svg>
+                            <img src="{{ asset('assets/cms/images/clients/indns_pwr.png') }}" alt="Indonesia Power">
                         </div>
                         <div class="flex flex-col">
-                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Dhian Thara</h4>
-                            <span class="text-[10px] text-gray-400">TES MINAT BAKAT</span>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">PLN Indonesia Power
+                            </h4>
+                            <span class="text-[10px] text-gray-400">REKRUTMEN</span>
                         </div>
                     </div>
                 </div>
@@ -861,7 +888,8 @@
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Test TPA online sangat fleksibel. Bisa ikut tes sesuai dengan jadwal sendiri, sangat membantu bagi saya yang memiliki kesibukan lain. membuat seluruh proses menjadi sangat mudah dan efisien
+                        Test TPA online sangat fleksibel. Bisa ikut tes sesuai dengan jadwal sendiri, sangat membantu
+                        bagi saya yang memiliki kesibukan lain. membuat seluruh proses menjadi sangat mudah dan efisien
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
@@ -886,7 +914,8 @@
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Pembelajaran sangat menarik untuk para Gen-Z pemateri disampaikan oleh para ahli sudah memberikan edukasi dan motivasi jati diri menjadi lebih baik dibidang apapun
+                        Pembelajaran sangat menarik untuk para Gen-Z pemateri disampaikan oleh para ahli sudah
+                        memberikan edukasi dan motivasi jati diri menjadi lebih baik dibidang apapun
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
@@ -908,18 +937,18 @@
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Penjelasan sangat mudah dipahami. alur materi sangat sistematis
+                        Bank Indonesia memiliki pengalaman yang luar biasa dengan Chaakra Consulting. Chaakra berusaha
+                        keras untuk memastikan kami puas dengan jasa yang mereka berikan. Sangat memuaskan!
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2C9.243 2 7 4.243 7 7c0 2.757 2.243 5 5 5s5-2.243 5-5c0-2.757-2.243-5-5-5zm0 12c-5.335 0-10 3.166-10 7h20c0-3.834-4.665-7-10-7z" />
-                            </svg>
+                            <img src="{{ asset('assets/cms/images/clients/bank-indonesia.png') }}"
+                                alt="Indonesia Power">
                         </div>
                         <div class="flex flex-col">
-                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Fawaied Kiki Usman</h4>
-                            <span class="text-[10px] text-gray-400">TES MINAT BAKAT</span>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Bank Indonesia
+                            </h4>
+                            <span class="text-[10px] text-gray-400">REKRUTMEN</span>
                         </div>
                     </div>
                 </div>
@@ -930,7 +959,8 @@
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Rekrutmennya praktir, mudah, efisien dan tidak berbelit-belit. Sistemnya online sangat memudahkan  dalam proses rekrutmen
+                        Rekrutmennya praktir, mudah, efisien dan tidak berbelit-belit. Sistemnya online sangat
+                        memudahkan dalam proses rekrutmen
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
@@ -940,7 +970,8 @@
                             </svg>
                         </div>
                         <div class="flex flex-col">
-                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Ika - Staff SDM Dillah Group</h4>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Ika - Staff SDM Dillah
+                                Group</h4>
                             <span class="text-[10px] text-gray-400">REKRUTMEN</span>
                         </div>
                     </div>
@@ -975,7 +1006,8 @@
                 <!-- --- FIRST SET OF LOGOS --- -->
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/Wilmar_International_Logo.svg.webp') }}" alt="Wilmar International"
+                    <img src="{{ asset('assets/cms/images/clients/Wilmar_International_Logo.svg.webp') }}"
+                        alt="Wilmar International"
                         class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
@@ -1056,8 +1088,8 @@
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/sucofindo-logo-png_seeklogo-293069.png') }}" alt="Sucofindo"
-                        class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
+                    <img src="{{ asset('assets/cms/images/clients/sucofindo-logo-png_seeklogo-293069.png') }}"
+                        alt="Sucofindo" class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
@@ -1125,7 +1157,7 @@
         </div>
     </section>
 
-   @include('layouts.footer')
+    @include('layouts.footer')
 
     <!-- WhatsApp Floating Action Button -->
     <a id="whatsappFab" href="https://wa.me/+6285730877745" target="_blank" rel="noopener noreferrer"
@@ -1184,14 +1216,14 @@
 
 
     <script>
-       document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {
             new Splide('#hero-slider', {
-                type        : 'loop',    
-                autoplay    : true,      
-                interval    : 4000,      
-                pauseOnHover: false,     
-                arrows      : false,     
-                pagination  : true      
+                type: 'loop',
+                autoplay: true,
+                interval: 4000,
+                pauseOnHover: false,
+                arrows: false,
+                pagination: true
             }).mount();
         });
         window.addEventListener('load', function () {
@@ -1271,29 +1303,35 @@
             if (window.scrollY > 10) {
                 mainNav.classList.add("nav-sticky");
                 const logo = document.getElementById("logo");
-                // if (logo) {
-                //     logo.src = "{{ asset('assets/cms/images/logo-2.png') }}";
-                // }
+                if (logo) {
+                    logo.src = "{{ asset('assets/cms/images/logo-2.png') }}";
+                }
                 // set nav-link text style to text-gray-800 when sticky
                 navLinks.forEach((link) => {
-                    // link.classList.remove("text-white");
-                    // link.classList.add("text-gray-800");
+                    if (link.textContent !== "Beranda") {
+                        link.classList.remove("text-white");
+                        link.classList.add("text-gray-800");
+                    }
                 });
             } else {
                 mainNav.classList.remove("nav-sticky");
                 const logo = document.getElementById("logo");
-                // if (logo) {
-                //     logo.src = "{{ asset('assets/cms/images/logo-2-white.png') }}";
-                // }
+                if (logo) {
+                    logo.src = "{{ asset('assets/cms/images/logo-2-white.png') }}";
+                }
                 // remove text-gray-800 class from nav-links when not sticky
                 navLinks.forEach((link) => {
-                    // link.classList.remove("text-gray-800");
-                    // link.classList.add("text-white");
+                    if (link.textContent !== "Beranda") {
+                        link.classList.remove("text-gray-800");
+                        link.classList.add("text-white");
+                    }
                 });
             }
         }
 
-        window.addEventListener("scroll", handleNavSticky, { passive: true });
+        window.addEventListener("scroll", handleNavSticky, {
+            passive: true
+        });
         window.addEventListener("resize", handleNavSticky);
 
         // --- SCROLL REVEAL INITIALIZATION ---

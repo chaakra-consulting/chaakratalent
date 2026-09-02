@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JWWQZ09M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M4JWWQZ09M');
+    </script>
     <title>Layanan Psikologi - Chaakra Talent</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,7 +50,8 @@
         <div class="max-w-screen mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="flex items-center justify-between w-full md:w-auto">
                 <div class="shrink-0 flex items-center h-full">
-                    <img src="{{ asset('assets/cms/images/logo-2.png') }}" alt="Logo" id="logo" class="h-18 w-auto object-contain" />
+                    <img src="{{ asset('assets/cms/images/logo-2.png') }}" alt="Logo" id="logo"
+                        class="h-18 w-auto object-contain" />
                 </div>
 
                 <button id="menuToggleBtn"
@@ -55,7 +68,7 @@
             </div>
 
             <div class="hidden group-[.open]:flex md:flex flex-col md:flex-row items-center gap-6 w-auto mt-4 md:mt-0">
-              @include('layouts.navbar')
+                @include('layouts.navbar')
                 <!-- <a href="#"
                     class="cursor-pointer relative z-10 flex items-center justify-center gap-2 px-4 py-2 mx-auto overflow-hidden text-lg border-2 border-gray-50 rounded-full bg-gray-50 backdrop-blur-md lg:font-medium font-semibold text-gray-800 before:absolute before:-z-10 before:aspect-square before:w-full before:-left-full before:rounded-full before:bg-[#ffdc59] before:transition-all before:duration-700 hover:before:left-0 hover:before:w-full hover:before:scale-150 hover:[&_svg]:rotate-90 hover:[&_svg]:bg-gray-50 hover:[&_svg]:border-transparent">
                     Explore
@@ -102,146 +115,163 @@
     <section class="pb-24">
         <div class="max-w-7xl mx-auto px-6 md:px-8 text-center mb-10 sr-bottom">
             <h3 class="text-3xl font-bold text-gray-900 mb-3">Galeri Foto</h3>
-            <p class="text-gray-600 text-sm md:text-base">Melihat lebih dekat bagaimana kami bekerja dan berinteraksi dengan klien serta tim internal untuk memberikan layanan terbaik.
+            <p class="text-gray-600 text-sm md:text-base">Melihat lebih dekat bagaimana kami bekerja dan berinteraksi
+                dengan klien serta tim internal untuk memberikan layanan terbaik.
             </p>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="masonry-gallery -mx-2">
-                
+
                 <div class="gallery-sizer w-full sm:w-1/2 md:w-1/3 lg:w-1/4"></div>
-                
+
                 <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/1.png') }}" 
-                             alt="Office Workspace" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                    </div>
-                </div>
-
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
-                    <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/2.png') }}" 
-                             alt="Team Meeting" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                    </div>
-                </div>
-
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
-                    <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/3.png') }}" 
-                             alt="Discussion" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/1.png') }}" alt="Office Workspace"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
                 <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/4.png') }}" 
-                             alt="Workshop" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/2.png') }}" alt="Team Meeting"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                 <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/5.png') }}" 
-                             alt="Consulting" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                    </div>
-                </div>
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
-                    <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/6.png') }}" 
-                             alt="HR Interview" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/3.png') }}" alt="Discussion"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/7.png') }}" 
-                             alt="Meeting Room" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/4.png') }}" alt="Workshop"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/8.jpeg') }}" 
-                             alt="Team Collaboration" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/5.png') }}" alt="Consulting"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
+                    <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
+                        <img src="{{ asset('assets/cms/images/galleries/6.png') }}" alt="HR Interview"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/9.jpeg') }}" 
-                             alt="Working at Desk" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/7.png') }}" alt="Meeting Room"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/10.jpeg') }}" 
-                             alt="Colleagues Talking" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/8.jpeg') }}" alt="Team Collaboration"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" style="transition-delay: 250ms;">
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/11.jpeg') }}" 
-                             alt="Strategy Presentation" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/9.jpeg') }}" alt="Working at Desk"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/12.jpeg') }}" 
-                             alt="Client Consultation" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/10.jpeg') }}" alt="Colleagues Talking"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom"
+                    style="transition-delay: 250ms;">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/13.jpeg') }}" 
-                             alt="Team Building" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/11.jpeg') }}" alt="Strategy Presentation"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/14.jpeg') }}" 
-                             alt="Brainstorming Session" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/12.jpeg') }}" alt="Client Consultation"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom" >
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/15.jpeg') }}" 
-                             alt="Corporate Office" 
-                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                        <img src="{{ asset('assets/cms/images/galleries/13.jpeg') }}" alt="Team Building"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
+                    <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
+                        <img src="{{ asset('assets/cms/images/galleries/14.jpeg') }}" alt="Brainstorming Session"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
+                    <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
+                        <img src="{{ asset('assets/cms/images/galleries/15.jpeg') }}" alt="Corporate Office"
+                            class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -257,15 +287,17 @@
 
     <script>
         // Page Loader
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             const loader = document.getElementById('page-loader');
             if (loader) {
                 loader.classList.add('opacity-0');
-                setTimeout(() => { loader.style.display = 'none'; }, 500);
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
             }
         });
 
-       document.addEventListener("scroll", function () {
+        document.addEventListener("scroll", function() {
             const indicator = document.getElementById("scrollIndicator");
             const heroSection = document.getElementById("heroSection");
 
@@ -323,16 +355,18 @@
             const navLinks = document.querySelectorAll("#mainNav .nav-link");
             if (window.scrollY > 10) {
                 mainNav.classList.add("nav-sticky");
-                
+
             } else {
                 mainNav.classList.remove("nav-sticky");
-              
+
             }
         }
 
-        window.addEventListener("scroll", handleNavSticky, { passive: true });
+        window.addEventListener("scroll", handleNavSticky, {
+            passive: true
+        });
         window.addEventListener("resize", handleNavSticky);
-        
+
         // Scroll Reveal
         ScrollReveal().reveal(".sr-bottom", {
             origin: "bottom",
@@ -354,7 +388,7 @@
         });
 
         // Masonry Init
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             var grid = document.querySelector('.masonry-gallery');
 
             if (grid) {
