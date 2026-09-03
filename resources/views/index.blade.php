@@ -2,23 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JWWQZ09M"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-M4JWWQZ09M');
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18424222199"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-18424222199');
-    </script>
     <title>Layanan Psikologi - Chaakra Talent</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -43,6 +26,23 @@
             font-family: 'Montserrat', sans-serif;
         }
     </style>
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JWWQZ09M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M4JWWQZ09M');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18424222199"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18424222199');
+    </script>
 </head>
 
 <body class="bg-white overflow-x-hidden">
