@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -16,8 +17,9 @@ Route::group(['prefix'=>'auth', 'as'=>'auth.'], function () {
     Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
-Route::group(['prefix'=>'admin', 'as'=>'admin.'], function () {
+Route::group(['prefix'=>'admin', 'as'=>'admin.','middleware'=>AdminMiddleware::class], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::group(['prefix'=>'article', 'as'=>'article.'], function () {
         Route::get('/', [App\Http\Controllers\Admin\ArticleController::class, 'index'])->name('index');

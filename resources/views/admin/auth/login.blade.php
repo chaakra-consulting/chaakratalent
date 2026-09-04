@@ -19,7 +19,8 @@
                             </p>
                         </div>
                         <div>
-                            <form>
+                            <form method="POST" action="{{ route('auth.login.submit') }}" class="space-y-5">
+                                @csrf
                                 <div class="space-y-5">
                                     <!-- Email -->
                                     <div>
@@ -36,6 +37,7 @@
                                         </label>
                                         <div x-data="{ showPassword: false }" class="relative">
                                             <input :type="showPassword ? 'text' : 'password'"
+                                            name="password"
                                                 placeholder="Enter your password"
                                                 class="dark:bg-dark-900 shadow-theme-xs focus:border-brand-300 focus:ring-brand-500/10 dark:focus:border-brand-800 h-11 w-full rounded-lg border border-gray-300 bg-transparent py-2.5 pr-11 pl-4 text-sm text-gray-800 placeholder:text-gray-400 focus:ring-3 focus:outline-hidden dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30" />
                                             <span @click="showPassword = !showPassword"
@@ -81,8 +83,8 @@
                         class="flex max-w-xs flex-col items-center">
 
                         <a href="/" class="mb-4 block">
-                            <img :src="isDark ? '{{ asset('assets/cms/images/logo-2-white.png') }}' :
-                                '{{ asset('assets/cms/images/logo-2.png') }}'"
+                            <img :src="isDark ? '{{ asset('assets/cms/images/logo-2-white.webp') }}' :
+                                '{{ asset('assets/cms/images/logo-2.webp') }}'"
                                 alt="Logo" />
                         </a>
                     </div>

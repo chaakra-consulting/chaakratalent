@@ -66,12 +66,12 @@
          
         <a href="/">
             <img x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen"
-                class="dark:hidden" src="{{ asset('assets/cms/images/logo-2.png') }}" alt="Logo" width="150" height="40" />
+                class="dark:hidden" src="{{ asset('assets/cms/images/logo-2.webp') }}" alt="Logo" width="150" height="40" />
             <img x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen"
-                class="hidden dark:block" src="{{ asset('assets/cms/images/logo-2-white.png') }}" alt="Logo" width="150"
+                class="hidden dark:block" src="{{ asset('assets/cms/images/logo-2-white.webp') }}" alt="Logo" width="150"
                 height="40" />
             <img x-show="!$store.sidebar.isExpanded && !$store.sidebar.isHovered && !$store.sidebar.isMobileOpen"
-                src="{{ asset('assets/cms/images/logo-2-white.png') }}" alt="Logo" width="32" height="32" />
+                src="{{ asset('assets/cms/images/logo-2-white.webp') }}" alt="Logo" width="32" height="32" />
 
         </a>
     </div>

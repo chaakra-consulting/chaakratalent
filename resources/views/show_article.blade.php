@@ -85,7 +85,7 @@
         <div class="max-w-screen mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="flex items-center justify-between w-full md:w-auto">
                 <div class="shrink-0 flex items-center h-full">
-                    <img src="{{ asset('assets/cms/images/logo-2.png') }}" alt="Logo" id="logo"
+                    <img src="{{ asset('assets/cms/images/logo-2.webp') }}" alt="Logo" id="logo"
                         class="h-18 w-auto object-contain" />
                 </div>
 

@@ -5,9 +5,8 @@
     <x-common.page-breadcrumb pageTitle="Artikel" />
 
     <div class="space-y-5 sm:space-y-6">
-        @if(Session::has('success'))
-            <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)"
-                x-transition.opacity.duration.500ms
+        @if (Session::has('success'))
+            <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)" x-transition.opacity.duration.500ms
                 class="rounded-xl border border-success-500 bg-success-50 p-4 dark:border-success-500/30 dark:bg-success-500/15">
 
                 <div class="flex items-start gap-3">
@@ -48,9 +47,9 @@
         <div class="grid md:grid-cols-3 gap-4 md:pb-10 md:pb-0 grid-flow-row md:grid-flow-col grid-cols-1">
             @foreach ($articles as $item)
                 <a href="{{ route('admin.article.edit', $item->id) }}"
-                    class="group flex h-full w-full max-w-screen flex-col transition-transform duration-300 ease-in-out hover:-translate-y-2 relative">
+                    class="group relative flex h-full w-full max-w-screen flex-col transition-transform duration-300 ease-in-out hover:-translate-y-2">
                     <div
-                        class="flex h-full w-full max-w-screen flex-col rounded-[25px] bg-[#f3f3f3] p-4 transition ease-in-out group-hover:bg-gray-900 md:max-w-112.5">
+                        class="flex h-full w-full max-w-screen flex-col rounded-[25px] bg-[#f3f3f3] p-4 transition ease-in-out group-hover:bg-gray-900 dark:bg-gray-800 dark:group-hover:bg-gray-700 md:max-w-112.5">
 
                         <div class="relative shrink-0">
                             <img src="{{ $item->image ? asset('storage/' . $item->image) : asset('https://framerusercontent.com/images/xgvT1z0zydCGbmMRZMJh1S1lXH8.jpg?scale-down-to=512&width=2500&height=1500 ') }}"
@@ -63,10 +62,10 @@
 
                             <!-- Tombol Delete yang sudah diperbarui -->
                             <button type="button" onclick="confirmDelete(event, {{ $item->id }})"
-                                class="absolute right-2 top-4 rounded-full bg-red-500 p-2 text-white opacity-0 shadow-sm transition-all duration-300 ease-in-out hover:bg-red-400 group-hover:opacity-100 z-10"
+                                class="absolute right-2 top-4 z-10 rounded-full bg-red-500 p-2 text-white opacity-0 shadow-sm transition-all duration-300 ease-in-out hover:bg-red-400 group-hover:opacity-100"
                                 aria-label="Delete post">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="h-5 w-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
                                 </svg>
@@ -74,15 +73,17 @@
                         </div>
 
                         <div class="flex flex-1 flex-col px-1 pb-2 pt-6">
-                            <h2 class="line-clamp-2 text-[26px] font-bold leading-[1.2] tracking-tight text-gray-800 transition ease-in-out group-hover:text-white">
+                            <h2
+                                class="line-clamp-2 text-[26px] font-bold leading-[1.2] tracking-tight text-gray-800 transition ease-in-out group-hover:text-white dark:text-gray-100">
                                 {{ $item->title }}
                             </h2>
 
-                            <p class="mt-3 line-clamp-3 text-[17px] leading-[1.6] text-[#666666] group-hover:text-white/90">
+                            <p
+                                class="mt-3 line-clamp-3 text-[17px] leading-[1.6] text-[#666666] group-hover:text-white/90 dark:text-gray-400">
                                 {{ $item->description }}
                             </p>
 
-                            <p class="mt-auto pt-4 text-[10px] leading-[1.6] text-[#868686]">
+                            <p class="mt-auto pt-4 text-[10px] leading-[1.6] text-[#868686] dark:text-gray-500">
                                 Admin | {{ Carbon\Carbon::createFromTimeString($item->created_at)->format('d M Y') }}
                             </p>
                         </div>
@@ -90,7 +91,8 @@
                 </a>
 
                 <!-- Form Hapus Tersembunyi (Pastikan rutenya sesuai) -->
-                <form id="delete-form-{{ $item->id }}" action="{{ route('admin.article.destroy', $item->id) }}" method="POST" class="hidden" style="display: none;">
+                <form id="delete-form-{{ $item->id }}" action="{{ route('admin.article.destroy', $item->id) }}"
+                    method="POST" class="hidden" style="display: none;">
                     @csrf
                     @method('DELETE')
                 </form>

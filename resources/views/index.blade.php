@@ -68,7 +68,7 @@
         <div class="max-w-screen mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="flex items-center justify-between w-full md:w-auto">
                 <div class="shrink-0 flex items-center h-full">
-                    <img src="{{ asset('assets/cms/images/logo-2-white.png') }}" alt="Logo" id="logo"
+                    <img src="{{ asset('assets/cms/images/logo-2-white.webp') }}" alt="Logo" id="logo"
                         class="h-18 w-auto object-contain" />
                 </div>
 
@@ -118,19 +118,19 @@
                     <ul class="splide__list h-full w-full">
                         <li class="splide__slide h-full w-full">
                             <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-1.png') }}');">
+                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-1.webp') }}');">
                             </div>
                         </li>
 
                         <li class="splide__slide h-full w-full">
                             <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-2.png') }}');">
+                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-2.webp') }}');">
                             </div>
                         </li>
 
                         <li class="splide__slide h-full w-full">
                             <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-3.png') }}');">
+                                style="background-image: url('{{ asset('assets/cms/images/slides/slide-3.webp') }}');">
                             </div>
                         </li>
                     </ul>
@@ -828,7 +828,7 @@
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                            <img src="{{ asset('assets/cms/images/clients/BSI.png') }}" alt="Bank Syariah Indonesia">
+                            <img src="{{ asset('assets/cms/images/clients/BSI.webp') }}" alt="Bank Syariah Indonesia">
                         </div>
                         <div class="flex flex-col">
                             <h4 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Bank Syariah Indonesia
@@ -854,7 +854,7 @@
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                            <img src="{{ asset('assets/cms/images/clients/Wilmar_International_Logo.svg.webp') }}"
+                            <img src="{{ asset('assets/cms/images/clients/Wilmar.webp') }}"
                                 alt="Wilmar International">
                         </div>
                         <div class="flex flex-col">
@@ -878,7 +878,7 @@
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                            <img src="{{ asset('assets/cms/images/clients/indns_pwr.png') }}" alt="Indonesia Power">
+                            <img src="{{ asset('assets/cms/images/clients/indns_pwr.webp') }}" alt="Indonesia Power">
                         </div>
                         <div class="flex flex-col">
                             <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">PLN Indonesia Power
@@ -950,7 +950,7 @@
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                            <img src="{{ asset('assets/cms/images/clients/bank-indonesia.png') }}"
+                            <img src="{{ asset('assets/cms/images/clients/bank-indonesia.webp') }}"
                                 alt="Indonesia Power">
                         </div>
                         <div class="flex flex-col">
@@ -1014,23 +1014,23 @@
                 <!-- --- FIRST SET OF LOGOS --- -->
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/Wilmar_International_Logo.svg.webp') }}"
+                    <img src="{{ asset('assets/cms/images/clients/Wilmar.webp') }}"
                         alt="Wilmar International"
                         class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/BSI.png') }}" alt="BSI"
+                    <img src="{{ asset('assets/cms/images/clients/BSI.webp') }}" alt="BSI"
                         class="max-h-16 md:max-h-36 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/logo_bri.png') }}" alt="BRI"
+                    <img src="{{ asset('assets/cms/images/clients/logo_bri.webp') }}" alt="BRI"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/BTN.png') }}" alt="BTN"
+                    <img src="{{ asset('assets/cms/images/clients/BTN.webp') }}" alt="BTN"
                         class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
@@ -1040,88 +1040,88 @@
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/Additon.png') }}" alt="Additon"
+                    <img src="{{ asset('assets/cms/images/clients/Additon.webp') }}" alt="Additon"
                         class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/Bapeda_Sidoarjo.png') }}" alt="Bapeda Sidoarjo"
+                    <img src="{{ asset('assets/cms/images/clients/Bapeda_Sidoarjo.webp') }}" alt="Bapeda Sidoarjo"
                         class="max-h-16 md:max-h-64 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/bpjs.png') }}" alt="BPJS"
+                    <img src="{{ asset('assets/cms/images/clients/bpjs.webp') }}" alt="BPJS"
                         class="max-h-16 md:max-h-64 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/citicon.png') }}" alt="Citicon"
+                    <img src="{{ asset('assets/cms/images/clients/citicon.webp') }}" alt="Citicon"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/CRA.png') }}" alt="CRA"
+                    <img src="{{ asset('assets/cms/images/clients/CRA.webp') }}" alt="CRA"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/Eka_Ormed.png') }}" alt="Eka Ormed"
+                    <img src="{{ asset('assets/cms/images/clients/Eka_Ormed.webp') }}" alt="Eka Ormed"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/indns_pwr.png') }}" alt="Indonesia Power"
+                    <img src="{{ asset('assets/cms/images/clients/indns_pwr.webp') }}" alt="Indonesia Power"
                         class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/jatim_grha_utama.png') }}" alt="Jatim Grha Utama"
+                    <img src="{{ asset('assets/cms/images/clients/jatim_grha_utama.webp') }}" alt="Jatim Grha Utama"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/Logo_Terminal_Petikemas_Surabaya.png') }}"
+                    <img src="{{ asset('assets/cms/images/clients/Logo_Terminal_Petikemas_Surabaya.webp') }}"
                         alt="Terminal Peti Kemas Surabaya"
                         class="max-h-16 md:max-h-20 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/pegadaian.png') }}" alt="Pegadaian"
+                    <img src="{{ asset('assets/cms/images/clients/pegadaian.webp') }}" alt="Pegadaian"
                         class="max-h-16 md:max-h-60 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/pelindo.png') }}" alt="Pelindo"
+                    <img src="{{ asset('assets/cms/images/clients/pelindo.webp') }}" alt="Pelindo"
                         class="max-h-16 md:max-h-60 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/sucofindo-logo-png_seeklogo-293069.png') }}"
+                    <img src="{{ asset('assets/cms/images/clients/sucofindo.webp') }}"
                         alt="Sucofindo" class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/properindoenvirotech.png') }}" alt="PT PET"
+                    <img src="{{ asset('assets/cms/images/clients/properindoenvirotech.webp') }}" alt="PT PET"
                         class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/Wira Jatim.png') }}" alt="Wira Jatim"
+                    <img src="{{ asset('assets/cms/images/clients/Wira_Jatim.webp') }}" alt="Wira Jatim"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/Sun Flower.png') }}" alt="Sun Flower"
+                    <img src="{{ asset('assets/cms/images/clients/Sun_Flower.webp') }}" alt="Sun Flower"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/logo_pt_satona.png') }}" alt="Satona"
+                    <img src="{{ asset('assets/cms/images/clients/logo_pt_satona.webp') }}" alt="Satona"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/ITS-Tekno-Sains.png') }}" alt="ITS Tekno Sains"
+                    <img src="{{ asset('assets/cms/images/clients/ITS-Tekno-Sains.webp') }}" alt="ITS Tekno Sains"
                         class="max-h-16 md:max-h-32 w-auto object-contain transition-opacity" />
                 </div>
                 <div
@@ -1147,15 +1147,15 @@
         <div
             class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 lg:gap-14 max-w-6xl mx-auto place-items-center w-full">
             <div class="flex items-center justify-center p-6 w-full h-40 md:h-56 rounded-2xl sr-bottom">
-                <img src="{{ asset('assets/cms/images/clients/Unair.png') }}" alt="Unair"
+                <img src="{{ asset('assets/cms/images/clients/Unair.webp') }}" alt="Unair"
                     class="max-h-20 md:max-h-32 w-auto object-contain transition-opacity" />
             </div>
             <div class="flex items-center justify-center p-6 w-full h-40 md:h-56 rounded-2xl sr-bottom">
-                <img src="{{ asset('assets/cms/images/clients/ups_sby.png') }}" alt="UPS Surabaya"
+                <img src="{{ asset('assets/cms/images/clients/ups_sby.webp') }}" alt="UPS Surabaya"
                     class="max-h-20 md:max-h-32 w-auto object-contain transition-opacity" />
             </div>
             <div class="flex items-center justify-center p-6 w-full h-40 md:h-56 rounded-2xl sr-bottom">
-                <img src="{{ asset('assets/cms/images/clients/UWKS.png') }}" alt="UWKS"
+                <img src="{{ asset('assets/cms/images/clients/UWKS.webp') }}" alt="UWKS"
                     class="max-h-20 md:max-h-32 w-auto object-contain transition-opacity" />
             </div>
             <div class="flex items-center justify-center p-6 w-full h-40 md:h-56 rounded-2xl sr-bottom">
@@ -1312,7 +1312,7 @@
                 mainNav.classList.add("nav-sticky");
                 const logo = document.getElementById("logo");
                 if (logo) {
-                    logo.src = "{{ asset('assets/cms/images/logo-2.png') }}";
+                    logo.src = "{{ asset('assets/cms/images/logo-2.webp') }}";
                 }
                 // set nav-link text style to text-gray-800 when sticky
                 navLinks.forEach((link) => {
@@ -1325,7 +1325,7 @@
                 mainNav.classList.remove("nav-sticky");
                 const logo = document.getElementById("logo");
                 if (logo) {
-                    logo.src = "{{ asset('assets/cms/images/logo-2-white.png') }}";
+                    logo.src = "{{ asset('assets/cms/images/logo-2-white.webp') }}";
                 }
                 // remove text-gray-800 class from nav-links when not sticky
                 navLinks.forEach((link) => {

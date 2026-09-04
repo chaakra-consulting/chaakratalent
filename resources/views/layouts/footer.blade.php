@@ -17,9 +17,9 @@
                         pengembangan organisasi.
                     </p>
                     <div class="flex items-center gap-4 mt-2">
-                        <img src="{{ asset('assets/cms/images/hmpsi.png') }}" alt="HMPSI"
+                        <img src="{{ asset('assets/cms/images/hmpsi.webp') }}" alt="HMPSI"
                             class="h-24 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
-                        <img src="{{ asset('assets/cms/images/bnsp.png') }}" alt="BNSP"
+                        <img src="{{ asset('assets/cms/images/bnsp.webp') }}" alt="BNSP"
                             class="h-32 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
                     </div>
                 </div>

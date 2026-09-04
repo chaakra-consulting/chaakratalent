@@ -17,11 +17,6 @@ class MenuHelper
                 'name' => 'Artikel',
                 'path' => '/admin/article',
             ],
-            [
-                'icon' => 'user-profile',
-                'name' => 'User Profile',
-                'path' => '/profile',
-            ],
         ];
     }
 

@@ -16,7 +16,7 @@
             </svg>
         </span>
 
-        <span class="block mr-1 font-medium text-theme-sm">Musharof</span>
+        <span class="block mr-1 font-medium text-theme-sm">Admin</span>
 
         <!-- Chevron Icon -->
         <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-180': dropdownOpen }" fill="none"
@@ -34,8 +34,8 @@
         style="display: none;">
         <!-- User Info -->
         <div>
-            <span class="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">Musharof Chowdhury</span>
-            <span class="mt-0.5 block text-theme-xs text-gray-500 dark:text-gray-400">randomuser@pimjo.com</span>
+            <span class="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">Admin</span>
+            <span class="mt-0.5 block text-theme-xs text-gray-500 dark:text-gray-400">{{ auth()->user()->email }}</span>
         </div>
 
         <!-- Menu Items -->
@@ -97,7 +97,7 @@
         <!-- Sign Out -->
         {{-- <form method="POST" action="#">
             @csrf --}}
-        <a href="/signin"
+        <a href="{{ route('admin.logout') }}"
             class="group flex items-center w-full gap-3 px-3 py-2 mt-3 font-medium text-gray-700 rounded-lg group text-theme-sm hover:bg-gray-100 hover:text-red-500 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
             @click="closeDropdown()">
             <span class="text-gray-500 group-hover:text-red-500 dark:group-hover:text-gray-300">
