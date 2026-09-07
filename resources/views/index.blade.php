@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Layanan Psikologi - Chaakra Talent</title>
+    <title>Chaakra Talent - Penyedia Jasa Pengembangan SDM</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -455,6 +455,7 @@
                 </div>
             </div>
         </div>
+        <h4 class="text-gray-800 mt-8 md:mt-0 font-light text-base text-center md:text-start ml-0 md:ml-[30vw]">Metodologi yang Chaakra gunakan</h4>
 
     </section>
 
@@ -653,7 +654,7 @@
 
                         <div class="relative mt-8">
                             <button
-                                onclick="window.location.href='https://wa.me/+6285730877745';"
+                                onclick="window.location.href='https://choise.chaakra-consulting.com/talent-test/daftar/1';"
                                 class="group/btn relative w-full overflow-hidden rounded-xl bg-[#ffdc59] p-px font-semibold text-white cursor-pointer">
                                 <div
                                     class="relative rounded-xl px-4 py-3 transition-colors group-hover/btn:bg-transparent">
@@ -824,7 +825,7 @@
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Kami berterima kasih kepada Chaakra Consulting yang selama ini membantu kami dalam hal rekrutmen
+                        Kami berterima kasih kepada Chaakra Consulting yang selama ini membantu kami dalam hal rekrutmen. +/- 8 tahun BSI memercayakan Chaakra dalam perekrutan karyawan di level Account Officer
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
@@ -871,8 +872,7 @@
                             d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Chaakra Consulting merupakan salah satu konsultan management dan sdm terbaik yang pernah kami
-                        hire
+                        Chaakra Consulting merupakan salah satu konsultan manajemen dan sdm terbaik yang pernah kami hire. Kami merekomendasikan Chaakra khususnya dalam bidang manajemen sumber daya manusia
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">

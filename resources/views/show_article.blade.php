@@ -18,9 +18,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="{{ $article->description }}" />
-    <meta name="keywords" content="Jasa Rekrutmen Perusahaan, Layanan Rekrutmen SDM, Biro Psikologi, Jasa Rekrutmen Perusahaan, Jasa Psikolog Surabaya, Pelatihan SDM Terbaik, Pelatihan SDM Surabaya,{{ $article->keywords }},{{ $article->tags }}">
+    <meta name="description" content="{{ $article->description }}" />
+    <meta name="keywords"
+        content="Jasa Rekrutmen Perusahaan, Layanan Rekrutmen SDM, Biro Psikologi, Jasa Rekrutmen Perusahaan, Jasa Psikolog Surabaya, Pelatihan SDM Terbaik, Pelatihan SDM Surabaya,{{ $article->keywords }},{{ $article->tags }}">
     <link rel="icon" href="{{ asset('assets/cms/images/favicon.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('assets/cms/css/style.css') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -125,9 +125,12 @@
                         class="max-w-5xl mx-auto px-6 py-16 md:py-20 flex flex-col md:flex-row gap-8 md:gap-16 font-sans text-gray-800">
 
                         <!-- Left Sidebar: Social Actions -->
+                        <!-- Left Sidebar: Social Actions -->
                         <aside class="flex-none flex flex-row md:flex-col gap-4 pt-2">
                             <!-- Twitter/X Icon -->
-                            <a class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:bg-gray-900 transition-colors group"
+                            <a href="https://twitter.com/intent/tweet?url={{ urlencode(request()->url()) }}&text={{ urlencode($article->title) }}"
+                                target="_blank" rel="noopener noreferrer"
+                                class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:bg-gray-900 transition-colors group"
                                 aria-label="Share on X">
                                 <svg class="w-4 h-4 group-hover:fill-white" viewBox="0 0 24 24">
                                     <path
@@ -135,9 +138,12 @@
                                 </svg>
                             </a>
 
-                            <!-- Instagram Icon -->
-                            <a class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:bg-gray-900 transition-colors group"
-                                aria-label="Share on Instagram">
+                            <!-- Instagram / Native Share Icon -->
+                            <!-- Instagram does not support direct web-sharing via URL. This uses the native Web Share API for mobile devices, and falls back to copying the link on desktop. -->
+                            <a href="#"
+                                onclick="if(navigator.share){ navigator.share({title: '{{ $article->title }}', url: window.location.href}); } else { navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!'); } return false;"
+                                class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:bg-gray-900 transition-colors group"
+                                aria-label="Share on Instagram or Copy Link">
                                 <svg class="w-4 h-4 group-hover:fill-white" viewBox="0 0 24 24">
                                     <path
                                         d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
@@ -145,7 +151,9 @@
                             </a>
 
                             <!-- Facebook Icon -->
-                            <a class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:bg-gray-900 transition-colors group"
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->url()) }}"
+                                target="_blank" rel="noopener noreferrer"
+                                class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:bg-gray-900 transition-colors group"
                                 aria-label="Share on Facebook">
                                 <svg class="w-4 h-4 group-hover:fill-white" viewBox="0 0 24 24">
                                     <path
@@ -153,20 +161,19 @@
                                 </svg>
                             </a>
                         </aside>
-
                         <!-- Main Content Area -->
                         <article class="flex-1 max-w-4xl">
 
                             <h1
-                                class="text-5xl md:text-[3.7rem] leading-tight font-bold text-gray-900 mb-8 tracking-tight">
+                                class="text-4xl md:text-[3.7rem] leading-tight font-bold text-gray-900 mb-8 tracking-tight">
                                 {{ $article->title }}
                             </h1>
 
-                            <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                            <div class="space-y-6 text-lg text-gray-700 leading-relaxed text-justify">
                                 {!! $article->content !!}
                             </div>
 
-                            
+
 
                         </article>
                     </div>
