@@ -176,7 +176,7 @@
 
                 <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/7.webp') }}" alt="Meeting Room"
+                        <img src="{{ asset('assets/cms/images/galleries/7.webp') }}" alt="Meeting dengan PT Pelindo"
                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
                         <div
                             class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -186,7 +186,7 @@
 
                 <div class="gallery-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 sr-bottom">
                     <div class="relative overflow-hidden rounded-xl bg-gray-100 group shadow-sm">
-                        <img src="{{ asset('assets/cms/images/galleries/8.webp') }}" alt="Team Collaboration"
+                        <img src="{{ asset('assets/cms/images/galleries/8.webp') }}" alt="Perayaan HUT CV.Sinar Mutiara Abadi"
                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
                         <div
                             class="absolute inset-0 bg-[#236490]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">

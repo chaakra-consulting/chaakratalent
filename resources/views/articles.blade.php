@@ -119,7 +119,7 @@
                         <!-- Image & Badge Section -->
                         <div class="relative shrink-0">
                             <img :src="'{{asset('storage/' . 'url')}}'.replace('url',article.image) "
-                                :alt="article.title" class="aspect-4/2 w-full rounded-[24px] object-cover" />
+                                :alt="article.slug" class="aspect-4/2 w-full rounded-[24px] object-cover" />
 
                             <!-- Category Badge -->
                             <span x-text="article.tags"

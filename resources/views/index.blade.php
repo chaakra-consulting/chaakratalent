@@ -187,7 +187,7 @@
 
         </div>
 
-        <img src="{{ asset('assets/cms/images/map-new.svg') }}" class="w-full md:scale-100 sr-zoom" srcset="" />
+        <img alt="Peta Persebaran Jaringan Psikologi Chaakra" src="{{ asset('assets/cms/images/map-new.svg') }}" class="w-full md:scale-100 sr-zoom" srcset="" />
     </div>
 
     <section class="py-16">
@@ -478,19 +478,16 @@
 
         <div class="grid sm:grid-cols-3 grid-cols-1 gap-8 items-stretch justify-center">
             <div class="group relative w-full h-full sr-bottom">
-                <!-- 1. GRADIENT OUTER WRAPPER -->
-                <!-- p-[3px] creates the side/bottom border thickness, pt-8 creates the thicker top area for the badge -->
+              
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[24px] bg-gradient-to-br from-[#ffdc59]  via-[#a50010] to-[#ffdc59] p-[3px] pt-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
 
-                    <!-- 2. TOP BADGE TEXT -->
                     <div class="absolute left-0 top-0 z-0 w-full py-2 text-center">
                         <span class="text-[10px] font-bold uppercase tracking-widest text-white">Khusus Untuk
                             Korporat</span>
                     </div>
 
-                    <!-- 3. INNER WHITE CONTAINER -->
-                    <!-- bg-white covers the inside, leaving only the gradient edges exposed -->
+                    
                     <div class="relative z-10 flex h-full flex-1 flex-col rounded-[21px] bg-white p-6">
 
                         <div class="relative">
@@ -876,7 +873,7 @@
                     </p>
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                            <img src="{{ asset('assets/cms/images/clients/indns_pwr.webp') }}" alt="Indonesia Power">
+                            <img src="{{ asset('assets/cms/images/clients/indns_pwr.webp') }}" alt="PLN Indonesia Power">
                         </div>
                         <div class="flex flex-col">
                             <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">PLN Indonesia Power
@@ -949,7 +946,7 @@
                     <div class="flex items-center gap-3 mt-auto">
                         <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
                             <img src="{{ asset('assets/cms/images/clients/bank-indonesia.webp') }}"
-                                alt="Indonesia Power">
+                                alt="Bank Indonesia">
                         </div>
                         <div class="flex flex-col">
                             <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Bank Indonesia
@@ -1068,7 +1065,7 @@
                 </div>
                 <div
                     class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
-                    <img src="{{ asset('assets/cms/images/clients/indns_pwr.webp') }}" alt="Indonesia Power"
+                    <img src="{{ asset('assets/cms/images/clients/indns_pwr.webp') }}" alt="PLN Indonesia Power"
                         class="max-h-16 md:max-h-24 w-auto object-contain transition-opacity" />
                 </div>
                 <div
