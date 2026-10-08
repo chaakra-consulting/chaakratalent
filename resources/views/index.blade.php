@@ -651,7 +651,7 @@
 
                         <div class="relative mt-8">
                             <button
-                                onclick="window.location.href='https://choise.chaakra-consulting.com/talent-test/daftar/1';"
+                                onclick="window.location.href='https://choise.chaakra-consulting.com/#pelatihan-section';"
                                 class="group/btn relative w-full overflow-hidden rounded-xl bg-[#ffdc59] p-px font-semibold text-white cursor-pointer">
                                 <div
                                     class="relative rounded-xl px-4 py-3 transition-colors group-hover/btn:bg-transparent">
